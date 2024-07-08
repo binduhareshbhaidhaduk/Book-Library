@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  margin: auto;
+}
+.form{
+  width: 700px;
+  /* height: 400px; */
+}
+
+.head{
+  background-color: rgb(64, 103, 109)!important;
+
+}
+
+.col6{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color:white;
+  
+}
+a{
+  text-decoration: none;
+}
+Label{
+  width:100px;
+}
+
+
+
+
+
+
+/* Adjusted styles for the book UI component */
+
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  margin: 3em;
+  text-align: center;
+}
+
+.book-ui {
+  width: 200px; /* Adjust width as needed */
+  height: 250px; /* Adjust height as needed */
+  transform-style: preserve-3d;
+  perspective: 900px;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  margin-right: 3em;
+  margin-bottom: 3em;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.book-ui .cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 900px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.book-ui .cover .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 0% 100%;
+  background-color: #b8dbd9;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-ui .cover .front h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.book-ui .cover .front figure {
+  width: 80%;
+  max-height: 80%;
+  margin-bottom: 1em;
+}
+
+.book-ui .cover .details {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.book-ui .cover .details li {
+  margin-bottom: 0.5em;
+}
+
+.book-ui .cover .pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-style: preserve-3d;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.book-ui .cover .pages li {
+  flex: 1;
+  height: 100%;
+  transform-origin: 0% 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.book-ui .cover .pages .second-page {
+  transform: rotateY(180deg);
+}
+
+.book-ui .cover .pages .second-page .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #afd9dd;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.book-ui .cover .pages .second-page .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1em; */
+}
+
+.book-ui .cover .pages .second-page .btn {
+  margin: 0 0.5em;
+}
+
+.book-ui .cover .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #586f7c;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.book-ui:hover .cover {
+  transform: rotateY(180deg);
+}
